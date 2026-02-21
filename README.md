@@ -26,3 +26,26 @@ docker push containerRegisteryName:tag
 ```
 
 The images will be pulled by the kubernetes deployment or statefulset.
+
+inside the manifests folder of each service we have to apply the resources :
+
+```sh
+kubectl apply -f .
+```
+
+for deleting we use:
+
+```sh
+kubectl delete -f .
+```
+for troubleshooting we would use:
+
+```sh
+// for checking application erros inide pod/container
+
+kubectl logs -f <pod_name> 
+
+// for kubernetes specific errors:
+
+kubectl describe deployment <deployment_name>
+```
