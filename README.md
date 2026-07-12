@@ -41,11 +41,11 @@ kubectl delete -f .
 for troubleshooting we would use:
 
 ```sh
-// for checking application erros inide pod/container
+# for checking application errors inside pod/container
 
 kubectl logs -f <pod_name> 
 
-// for kubernetes specific errors:
+# for kubernetes specific errors:
 
 kubectl describe deployment <deployment_name>
 ```
